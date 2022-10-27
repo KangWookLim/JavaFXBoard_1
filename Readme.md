@@ -40,3 +40,15 @@ https://gluonhq.com/products/scene-builder/
 
 ```
 
+- fx_board 테이블 
+```
+CREATE TABLE `fx_board` (
+  `BOARD_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `BOARD_TITLE` varchar(255) DEFAULT NULL,
+  `BOARD_WRITER` varchar(255) DEFAULT NULL,
+  `BOARD_CONTENT` longtext,
+  `BOARD_DATE` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`BOARD_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+```
