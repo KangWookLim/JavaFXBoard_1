@@ -46,8 +46,6 @@ public class DetailController implements Initializable {
 		//글내용
 		vo.setBoardContent(textArea_boardContent.getText());
 		
-		System.out.println(vo);
-		
 		if(label_boardId.getText().equals("")){
 			//작성한 글을 DB에 저장
 			biz.insertBoard(vo);
