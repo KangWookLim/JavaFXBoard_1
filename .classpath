@@ -51,12 +51,12 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/ibatis-2.3.4.726-patched.jar">
+	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.30.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.30.jar">
+	<classpathentry kind="lib" path="lib/ibatis-2.3.4.726-patched.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

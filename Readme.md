@@ -30,14 +30,14 @@ https://gluonhq.com/products/scene-builder/
 ```
 
 - !오류
-```
 오류: 기본 클래스 application.Main을(를) 찾거나 로드할 수 없습니다.
-원인: java.lang.NoClassDefFoundError: javafx/application/Application
+	java.lang.NoClassDefFoundError: javafx/application/Application
+원인: 모듈 path 와 모듈 패키지 등록 필요
 
-
-[Run configuration ...] 클릭 -> [Arguments] 탭에서 -> [VM Arguments] 작성   
---module-path "JavaFX SDK 경로\lib" --add-modules=javafx.controls,javafx.fxml
-
+해결방법 : 
+	[Run configuration ...] 클릭 -> [Arguments] 탭에서 -> [VM Arguments] 작성   
+```
+	--module-path "JavaFX SDK 경로\lib" --add-modules=javafx.controls,javafx.fxml
 ```
 
 - fx_board 테이블 
@@ -52,3 +52,13 @@ CREATE TABLE `fx_board` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 ```
+
+
+- !오류
+
+오류: Graphics Device initialization failed for :  d3d, sw
+	Error initializing QuantumRenderer: no suitable pipeline found
+원인: JavaFX 관련 jar 파일만 등록하여 생긴 문제.
+	JavaFX SDK bin 폴더에  dll파일들도 같이 참조해야하기에 상대경로 찾을수 없어 발생한 문제.
+해결방법 : JavaFX SDK로 다시 추가   
+![](javafx-error.png)
