@@ -56,8 +56,11 @@ CREATE TABLE `fx_board` (
 
 - !오류
 
-**오류:** Graphics Device initialization failed for :  d3d, sw   
+**오류내용** 
+```
+Graphics Device initialization failed for :  d3d, sw   
 	Error initializing QuantumRenderer: no suitable pipeline found   
+```
 **원인:** JavaFX 관련 jar 파일만 등록하여 생긴 문제.   
 	JavaFX SDK bin 폴더에  dll파일들도 같이 참조해야하기에 상대경로 찾을수 없어 발생한 문제.   
 **해결방법:** JavaFX SDK로 다시 추가      
